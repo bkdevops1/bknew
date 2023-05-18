@@ -173,7 +173,8 @@ pipeline {
                                         applicationName:"${appName}",
                                         deployableName:"${deployableName}",
                                         changesetNumber:"${changeSetId}",
-                                        showResults: false,
+                                        showResults: true,
+                                        outputFormat:"xml",
                                         markFailed: false
                                     )
                                     if (!changeSetResults){
