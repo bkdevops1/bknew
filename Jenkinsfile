@@ -166,18 +166,8 @@ pipeline {
                                         error "Changeset was not created"
                                     }
                                 }
-                    
-                 
                             }
-                        steps {
-                echo "Deploying.."
-                snDevOpsArtifact(artifactsPayload:"""{"artifacts": [
-                    {"name": "demo1.jar","version": "${version}","semanticVersion": "${semanticVersion}","repositoryName": "demo1"},
-                    {"name": "demo2.jar","version": "${version}","semanticVersion": "${semanticVersion}","repositoryName": "demo2"},
-                    {"name": "demo3.jar","version": "${version}","semanticVersion": "${semanticVersion}","repositoryName": "demo3"},
-                    {"name": "demo4.jar","version": "${version}","semanticVersion": "${semanticVersion}","repositoryName": "demo4"},
-                    {"name": "demo5.jar","version": "${version}","semanticVersion": "${semanticVersion}","repositoryName": "demo5"}]}""")
-                }
+                 
                         }
 
                         // Auto-validation was set during upload; get status of snapshot
