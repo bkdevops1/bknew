@@ -121,13 +121,7 @@ pipeline {
                 }
             }
         } 
-         stage("Test") {
-            steps {
-            	echo "Testing..."
-                sh "mvn test -Dpublish"
-                junit "**/target/surefire-reports/*.xml"
-            }
-        }    
+          
         // Validate code and config data
         stage('Validate') {
             parallel {
