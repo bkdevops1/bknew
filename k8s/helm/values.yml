@@ -66,7 +66,7 @@ ingress:
   #  - secretName: chart-example-tls
   #    hosts:
   #      - chart-example.local
-
+# checking the pipeline in jenkins (KP)
 resources: 
   limits:
     cpu: 100m
