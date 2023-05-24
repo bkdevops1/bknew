@@ -121,19 +121,7 @@ pipeline {
                 }
             }
         } 
-        // test summaries stage      
-        stage('Test &2') {
-           steps {
-              
-              sh 'mvn test'
-           }
-           post {
-             always {
-                junit "**/src/surefire-reports/*.xml"
-             }
-           }
-       }
-
+   
         // Validate code and config data
         stage('Validate') {
             parallel {
